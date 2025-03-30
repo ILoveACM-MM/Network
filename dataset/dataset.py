@@ -8,7 +8,7 @@ TEST,TRAIN = 1,2
 class ISIC2018_Datasets(Dataset):
     def __init__(self,mode):
         super().__init__()
-        cwd='/home/xyq/Datasets'
+        cwd=os.getcwd()
         self.mode=mode
         gts_path=os.path.join(cwd,'data','ISIC2018','ISIC2018_Task1_Training_GroundTruth','ISIC2018_Task1_Training_GroundTruth')
         images_path=os.path.join(cwd,'data','ISIC2018','ISIC2018_Task1-2_Training_Input','ISIC2018_Task1-2_Training_Input')
@@ -52,7 +52,7 @@ class ISIC2018_Datasets(Dataset):
 class BUSI_Datasets(Dataset):
     def __init__(self,mode):
         super().__init__()
-        self.mode='/home/xyq/Datasets'
+        self.mode=mode
         cwd=os.getcwd()
         data_path_1=os.path.join(cwd,'data','BUSI','Dataset_BUSI','Dataset_BUSI_with_GT','benign')
         data_path_2=os.path.join(cwd,'data','BUSI','Dataset_BUSI','Dataset_BUSI_with_GT','malignant')
@@ -134,7 +134,7 @@ class Kvasir_Datasets():
 class COVID_19_Datasets(Dataset):
     def __init__(self,mode):
         super().__init__()
-        cwd='/home/xyq/Datasets'
+        cwd=os.getcwd()
         self.mode=mode
         gts_path=os.path.join(cwd,'data','COVID_19','COVID-19_Lung_Infection_train','COVID-19_Lung_Infection_train','masks')
         images_path=os.path.join(cwd,'data','COVID_19','COVID-19_Lung_Infection_train','COVID-19_Lung_Infection_train','images')
